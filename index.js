@@ -26,6 +26,9 @@ app.get('/',(req,res)=>{
 //     res.send("checking");
 // })
 
+app.use('*',(req,res,next)=>{
+    res.status(404).json({"msg":"Not found"});
+});
 
 const Port=process.env.PORT||3000;
 
