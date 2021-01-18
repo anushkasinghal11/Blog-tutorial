@@ -19,6 +19,13 @@ mongoose.connect(process.env.MONGO_URL,{ useNewUrlParser: true,useUnifiedTopolog
     console.log(err);
     process.exit();
 })
+app.get('/',(req,res)=>{
+    res.send("Welcome to the class");
+});
+// app.get('/check',(req,res)=>{
+//     res.send("checking");
+// })
+
 
 const Port=process.env.PORT||3000;
 
