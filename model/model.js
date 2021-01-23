@@ -1,6 +1,6 @@
-import { Schema, model } from 'mongoose';
+const mongoose=require('mongoose');
 
-const blogSchema=Schema({
+const blogSchema=mongoose.Schema({
     title:{
         type: String,
         required:true
@@ -17,6 +17,4 @@ const blogSchema=Schema({
     timestamps:true
 });
 
-const model = mongoose.model("model", model)
-
-export default model('Blog',blogSchema);
+module.exports=mongoose.model('Blog',blogSchema);
