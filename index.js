@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGO_URL,{ useNewUrlParser: true,useUnifiedTopolog
     process.exit();
 })
 app.get('/',(req,res)=>{
-    res.send("Welcome to the class");
+    res.send("Welcome");
 });
 // app.get('/check',(req,res)=>{
 //     res.send("checking");
