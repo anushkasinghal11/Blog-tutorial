@@ -13,7 +13,8 @@ exports.getall=async(req,res)=>{
 
      let data;
      try {
-         data = await Blog.find();
+        // data = await Blog.find();
+        data= await Blog.find().sort({updatedAt:'desc'})
 
      } catch (err) {
          if(err) return res.status(500).json(err);
